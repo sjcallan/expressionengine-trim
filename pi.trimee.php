@@ -1,9 +1,6 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-ini_set('display_errors');
-error_reporting(E_ALL|E_STRICT);
-
 $plugin_info = array(
 	'pi_name' => 'TrimEE',
 	'pi_version' =>'1.0',
@@ -77,6 +74,7 @@ class Trimee {
 		/* Add trailing ... if we want it */
 			if($include_trailing == TRUE)
 			{
+				$output = trim($output);
 				$output .= "...";
 			}
 		
